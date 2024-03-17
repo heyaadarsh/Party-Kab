@@ -5,15 +5,19 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import moment from "moment";
 
+
 const Friends = () => {
+
+    const api = import.meta.env.VITE_APIURL;
 
     const [users, setUsers] = useState([]);
     const [upcomingBirthday, setUpcomingBirthday] = useState({});
 
     useEffect(() => {
+        
         const fetchData = async () => {
             try{
-                const response = await axios.get("http://localhost:8000/api/get");
+                const response = await axios.get(`https://${api}/get`);
                 setUsers(response.data);
                 if (response.data.length > 0) {
                     setUpcomingBirthday(response.data[0]);
@@ -55,7 +59,7 @@ const Friends = () => {
     }, [upcomingBirthday]);
 
     const deleteUser = async (userID) => {
-        await axios.delete(`http://localhost:8000/api/delete/${userID}`)
+        await axios.delete(`https://${api}/delete/${userID}`)
             .then((responses) => {
                 setUsers(prevUsers => prevUsers.filter((user) => user._id !== userID))
                 toast.success(responses.data.msg, { position: "top-right" })

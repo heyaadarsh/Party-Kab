@@ -7,6 +7,8 @@ import "../addFriend/AddConnection.css"
 
 const EditFriend = () => {
 
+  const api = import.meta.env.VITE_APIURL;
+
   const {id} = useParams();
   const users = {
     name: "",
@@ -23,7 +25,7 @@ const EditFriend = () => {
   }
 
   useEffect(()=>{
-    axios.get(`http://localhost:8000/api/getone/${id}`)
+    axios.get(`https://${api}/getone/${id}`)
     .then((response)=>{
       setUser(response.data);
     })
@@ -34,7 +36,7 @@ const EditFriend = () => {
 
   const submitForm = async(e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8000/api/update/${id}`, user)
+    await axios.put(`https://${api}/update/${id}`, user)
     .then((response)=> {
         console.log(response);
         toast.success(response.data.msg, {position: "top-right"})

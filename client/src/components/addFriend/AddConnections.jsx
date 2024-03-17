@@ -6,6 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const AddConnections = () => {
 
+    const api = import.meta.env.VITE_APIURL;
+
     const users = {
         name: "",
         dateOfBirth: "",
@@ -21,7 +23,7 @@ const AddConnections = () => {
 
     const submitForm = async(e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8000/api/create", user)
+        await axios.post(`https://${api}/create`, user)
         .then((response)=> {
             console.log(response);
             toast.success(response.data.msg, {position: "top-right"})
