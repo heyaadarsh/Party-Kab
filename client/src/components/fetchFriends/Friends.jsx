@@ -4,9 +4,12 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import moment from "moment";
+import { useNavigate } from 'react-router-dom';
 
 
 const Friends = () => {
+
+    const navigate = useNavigate();
 
     const api = import.meta.env.VITE_APIURL;
 
@@ -63,6 +66,7 @@ const Friends = () => {
             .then((responses) => {
                 setUsers(prevUsers => prevUsers.filter((user) => user._id !== userID))
                 toast.success(responses.data.msg, { position: "top-right" })
+                navigate("/");
             })
             .catch((error) => {
                 console.log(error);
