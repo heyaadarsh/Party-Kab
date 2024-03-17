@@ -1,0 +1,47 @@
+.addConnection{
+    width: 25%;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.0650);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.addForm .inputGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addForm{
+    margin-top: 20px;
+}
+
+.addForm .inputGroup label{
+    margin-bottom: 5px;
+}
+
+.addForm .inputGroup input{
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+.addForm .inputGroup button{
+    border: 0;
+    outline: none;
+    background-color: #272727;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.0650);
+}
+
+.addConnection h3{
+    margin: 10px;
+    font-size: 28px;
+}

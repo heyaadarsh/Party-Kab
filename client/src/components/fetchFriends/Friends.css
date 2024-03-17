@@ -1,0 +1,105 @@
+.friendTable{
+    width: 60%;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.0650);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.addButton{
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-weight: 500;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.0650);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.friendTable table{
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+.friendTable table thead th{
+    background-color: #272727;
+    color: white;
+    padding: 10px;
+}
+
+.friendTable table tbody td{
+    padding: 10px;
+    text-align: center;
+}
+
+.actionButtons button{
+     border: 0;
+     outline: 0;
+     background: red;
+     color: white;
+     padding: 8px 10px;
+     border-radius: 5px;
+     cursor: pointer;
+}
+
+.actionButtons a{
+    background: green;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #272727;
+    height: 80px;
+    text-align: center;
+}
+
+.navbar img{
+    width: 220px;
+    margin-top: 7px;
+}
+
+.upcoming{
+    width: 60%;
+    margin: 40px auto;
+    background-color: #FFD4D4;
+    padding: 20px 40px;
+    border-radius: 5px;
+    border-style: double;
+    
+}
+
+.upcoming h4{
+    color: rgb(123, 7, 7);
+}
+  
+
+.featured{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+.featured-1{
+    margin: 10px 10px;
+    background-color: #f1f8d8;
+    padding: 40px 60px;
+    padding-bottom: 100px;
+    border-radius: 5px;
+    border-style: dotted;
+}
+
+.featured-1 h4{
+    margin-top: -20px;
+    text-align: center;
+}
+
+#ft3 {
+    background-color: #fdfff8;
+  }
