@@ -71,19 +71,19 @@ export const getAll = async (req, res) => {
                 }
             },
             // 2024-03-13T12:00:00Z
-            {
-                $match: {
-                    $or: [
-                        { month: { $gt: currentMonth } },
-                        {
-                            $and: [
-                                { month: currentMonth },
-                                { day: { $gte: currentDay } }
-                            ]
-                        }
-                    ]
-                }
-            },
+            // {
+            //     $match: {
+            //         $or: [
+            //             { month: { $gt: currentMonth } },
+            //             {
+            //                 $and: [
+            //                     { month: currentMonth },
+            //                     { day: { $gte: currentDay } }
+            //                 ]
+            //             }
+            //         ]
+            //     }
+            // },
             {
                 $sort: { month: 1, day: 1 }
             }

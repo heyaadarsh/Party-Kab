@@ -23,7 +23,7 @@ const AddConnections = () => {
 
     const submitForm = async(e) => {
         e.preventDefault();
-        await axios.post(`https://${api}/create`, user)
+        await axios.post(`http://${api}/create`, user)
         .then((response)=> {
             console.log(response);
             toast.success(response.data.msg, {position: "top-right"})
