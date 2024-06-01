@@ -25,7 +25,7 @@ const EditFriend = () => {
   }
 
   useEffect(()=>{
-    axios.get(`http://${api}/getone/${id}`)
+    axios.get(`https://${api}/getone/${id}`)
     .then((response)=>{
       setUser(response.data);
     })

@@ -17,7 +17,7 @@ const Friends = () => {
         
         const fetchData = async () => {
             try{
-                const response = await axios.get(`http://${api}/get`);
+                const response = await axios.get(`https://${api}/get`);
                 setUsers(response.data);
                 if (response.data.length > 0) {
                     setUpcomingBirthday(response.data[0]);
@@ -59,7 +59,7 @@ const Friends = () => {
     }, [upcomingBirthday]);
 
     const deleteUser = async (userID) => {
-        await axios.delete(`http://${api}/delete/${userID}`)
+        await axios.delete(`https://${api}/delete/${userID}`)
             .then((responses) => {
                 setUsers(prevUsers => prevUsers.filter((user) => user._id !== userID))
                 toast.success(responses.data.msg, { position: "top-right" })
